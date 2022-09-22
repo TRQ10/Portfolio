@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,7 +23,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--color-white);
     transition: all .4s ease-in-out;
 }
@@ -56,6 +56,7 @@ section{
     transform: translateY(-100%) scale(0);
     transition: all .4s ease-in-out;
     background: linear-gradient(0deg, var(--gradient-primary)0%, var(--gradient-secondary) 100%); 
+    overflow: auto;
 }
 
 .active {
@@ -63,11 +64,8 @@ section{
     animation: appear 1s ease-in-out;
     transform: translateY(0) scaleY(1);
     @keyframes appear {
-        0%{transform: translateY(-100%) scaley(0);
-        }
-
-        100%{ transform: translateY(0) scaley(1);
-        }
+        0%{transform: translateY(-100%) scaley(0);}
+        100%{ transform: translateY(0) scaley(1);}
     }
 }
 
@@ -104,7 +102,7 @@ section{
         background-color: var(--color-white) !important;
         transition: all .4s ease-in-out;
         i{
-            color: var(--color-grey-3) !important; }
+ color: var(--color-grey-3) !important; }
     }
 }   
 
@@ -128,8 +126,9 @@ section{
             background-color: var();
             transition: all .4s ease-in-out;
             img {
-                margin-left: auto;
-                margin-right: auto; 
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
                 transition: all .4s ease-in-out;
             }
         }
@@ -139,15 +138,14 @@ section{
             flex-direction: column;
             justify-content: center;
             padding-right: 18rem;
-            .name{
+            .name {
                 font-size: 3rem;
-                span{ color: var(--color-mauve); }   
+                span { color: var(--color-secondary); }
             }
-            p{
+            p {
                 margin: 1.5rem 0;
                 line-height: 2rem;
-            }
-        }
+            }        }
     }
 /*About*/
 .about-container {
