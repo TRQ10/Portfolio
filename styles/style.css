@@ -536,6 +536,7 @@ section {
   align-self: flex-start;
   align-items: center;
   overflow: hidden;
+  margin-left: 25px;
 }
 .main-btn .btn-text {
   padding: 0 2rem;
